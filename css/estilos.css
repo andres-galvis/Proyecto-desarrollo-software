@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#navBar{
+
+   padding: 15px 15px 15px 30px;
+   background-color: rgba(194, 194, 194, 0.274);
+
+}
+
+.logoNav{
+    width: 100px;
+    height: auto;
+}
+
+#navItems{
+    
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*seccion de INICIO*/
+
+.mainHome{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */    
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+    
+}
+
+#container .description{
+    width: 45%;
+    height: 100%;
+    text-align: justify;
+    /* background-color: salmon; */
+    
+}
+
+#container .buttonLinks{
+    width: 45%;
+    height: 100%;
+    background-color: rgba(197, 197, 197, 0.5);
+    padding: 30px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonLinks .links{
+    margin-top:30px;
+}
+
+.links button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*seccion integrantes de grupo*/
+
+.mainHome .grupo{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: brown; */
+    padding: 20px;
+}
+
+.grupo .grupoTitulo{
+    width: 100%;
+    height: auto;
+    /* background-color: aquamarine; */
+    padding: 20px 20px 20px 40px;
+    
+}
+
+.grupoTitulo h2{
+    font-weight: 600;
+}
+
+.grupo .card{
+    width: 20%;
+    height: 100%;
+    margin: 80px 0px;
+    box-shadow: 15px 15px 5px rgba(218, 215, 215, 0.301);
+}
+
+.card img{
+    width: auto;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card p{
+    text-align: center;
+    
+}
+
+/*pie de página*/
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(197, 197, 197, 0.5);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.logoFooter {
+   width: 20%;
+   height: auto;
+   /* background-color: rgb(36, 4, 167); */
+   
+}
+
+.logoFooter img{
+    width: 150px;
+    height: auto;
+}
+
+.menuFooter{
+    width: 35%;
+    height: auto;
+}
+
+.menuFooter li{
+    list-style: none;
+    text-align: center;
+    /* background-color: aquamarine; */
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.menuFooter li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.social{
+    padding: 10px;
+    height: auto;
+}
+
+.social img{
+    width: 50px;
+    height: auto;
+    margin: 20px;
+}
+
+
+/*SECCIÓN PRODUCTOS*/
+
+.tituloProductos{
+    width: 100%;
+    padding: 70px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.tituloProductos button{
+    margin-left: 40px;
+}
+
+.productosTable{
+    margin-top: 70px;
+}
+
+.tablas{
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablas h2{
+    color: #fff;
+}
+
+.tablas button{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.tablas button a{
+    text-decoration: none;
+    color: #000;
+}
+
+#footerProductos{
+    margin: 0;
+}

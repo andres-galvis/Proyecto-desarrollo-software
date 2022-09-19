@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" id="navBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logoNav" src="imagenes/logoNav.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- d-flex justify-content-center -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav" id="navItems">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="html/productos.html">Productos</a>
+                        <a class="nav-link" href="html/productoFactura.html">ProductoFactura</a>
+                        <a class="nav-link" href="html/facturas.html">Facturas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mainHome">
+        <div id="container">
+            <section class="description">
+                <h1>Descripción del proyecto</h1>
+                <p>
+                    Proyecto realizado en el transcurso del ciclo 3 del programa MINTIC 2022,
+                    este proyecto consiste en una tienda virtual llamada "mibarrio.com" en la cual
+                    se realiza la programación de algunas tablas con sus respectivos métodos del CRUD para
+                    actualizar, eliminar, modificar y agregar nuevos datos a cualquiera de las tablas
+                    programadas.
+                    <br>
+                    <br>
+                    Para este proyecto se usaron varias tecnologías, entre ellas, HTML5, CSS3, Bootstrap, JavaScript,
+                    JAVA, SpringBoot, MySQL entre otras. Para lograr una interacción entre el usuario con la infomación
+                    de las tablas programadas.
+                </p>
+
+            </section>
+
+            <section class="buttonLinks">
+
+                <p>
+                    Desde aquí puedes acceder a las distintas tablas programadas
+                    en este proyecto. Este proyecto mibarrio.com fue programado y diseñado
+                    por 4 personas.
+                </p>
+
+                <div class="links">
+                    <button type="button" class="btn btn-dark"><a href="html/productos.html">Productos</a></button>
+                    <button type="button" class="btn btn-dark"><a href="html/productoFactura.html">ProductoFactura</a></button>
+                    <button type="button" class="btn btn-dark"><a href="html/facturas.html">Facturas</a></button>
+                </div>
+            </section>
+        </div>
+
+        <section class="grupo">
+
+            <div class="grupoTitulo">
+                <h2>Equipo de trabajo grupo 10</h2>
+            </div>
+
+            <div class="card" >
+                <img src="imagenes/integrante1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Andrés Felipe Galvis Camacho
+                        <br>
+                        Product Owner
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagenes/integrante2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Waldemar Danny Villamarín Muñoz
+                        <br>
+                        Scrum Master
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagenes/integrante3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Fabián Gabriel Camacho Castro
+                        <br>
+                        Team Developer
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" >
+                <img src="imagenes/integrante4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Juan Sanchez
+                        <br>
+                        Team Developer
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="logoFooter">
+            <a href="index.html"><img src="imagenes/logoNav.png" alt=""></a>
+        </div>
+
+        <div class="menuFooter">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="html/productos.html">Productos</a></li>
+                <li><a href="html/productoFactura.html">ProductoFactura</a></li>
+                <li><a href="html/facturas.html">Facturas</a></li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <a href="https://gitlab.com/O18-10/mibarrio" target="blank"><img src="imagenes/gitlab.png" alt="GitLab"></a>
+            <a href="https://andres-galvis.atlassian.net/jira/software/projects/O1810/boards/2" target="blank"><img src="imagenes/JIRA.png" alt="GitLab"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
