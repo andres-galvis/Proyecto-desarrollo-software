@@ -1,3 +1,4 @@
+//const url="https://minticloud.uis.edu.co/c3s32formador/"
 const url = "http://localhost:8080/";
 
 function sendRequest(endPoint, method, data){

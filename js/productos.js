@@ -1,10 +1,10 @@
-function loadData(){
-    let request=sendRequest('producto/list', 'GET', '')
+function loadData() {
+    let request = sendRequest('producto/list', 'GET', '')
     let tablaProd = document.getElementById('tabla-productos');
-    tablaProd.innerHTML="";
-    request.onload=function(){
+    tablaProd.innerHTML = "";
+    request.onload = function () {
 
-        let data= request.response;
+        let data = request.response;
         data.array.forEach(element => {
             tablaProd.innerHTML += `
 
@@ -19,7 +19,7 @@ function loadData(){
                 <td>${element.cantidad_prod}</td>
                 <td>
                     <button type="button" class="btn btn-dark" 
-                    onclick='window.location="productos.html?id=${element.codigo_prod}"'>Editar</button>
+                    onclick='window.location="formularioProd.html?id=${element.codigo_prod}"'>Editar</button>
                     <button type="button" class="btn btn-danger"
                     onclick='deleteProducto(${element.codigo_prod})'>Eliminar</button>
                 </td>
@@ -28,8 +28,8 @@ function loadData(){
             `
         });
     }
-    request.onerror=function(){
-        tablaProd.innerHTML =`
+    request.onerror = function () {
+        tablaProd.innerHTML = `
 
             <tr>
                 <td colspan="9">Error al recuperar los datos...</td>
@@ -37,67 +37,33 @@ function loadData(){
 
         `;
     }
+}
 
-    /*function deleteProducto(codigo_prod){
+function deleteProducto(codigo_prod) {
 
-        let request=sendRequest('producto/'+codigo_prod, 'DELETE', '')
-        request.onload=function(){
-            loadData()
-        }
-        ...
-    }*/
+    let request = sendRequest('producto/' + codigo_prod, 'DELETE', '')
+    request.onload = function () {
+        loadData()
+    }
+}
 
-    /*function loadProductos(codigo_prod){
+function saveProducto() {
 
-        let request=sendRequest('producto/list/'+codigo_prod, 'GET', '')
-        let id=document.getElementById('codigo_prod')
-        let nombre = document.getElementById('nombre_prod')
-        let categoria = document.getElementById('id_cat')
-        let marca=document.getElementById('marca_prod')
-        let descripcion=document.getElementById('descripcion_prod')
-        let imagen=document.getElementById('imagen_prod')
-        let precio=document.getElementById('precio_prod')
-        let cantidad=document.getElementById('cantidad_prod')
-        let nitProv=document.getElementById('nit_prov')
-        request.onload=function(){
-
-            let data=request.response;
-            nombre.value=data.nombre_prod
-            categoria.value=data.id_cat
-            marca.value=data.marca_prod
-            descripcion.value=data.descripcion_prod
-            imagen.value=data.imagen_prod
-            precio.value=data.precio_prod
-            cantidad.value=data.cantidad_prod
-            nitProv.value=data.nit_prov
-            
-        }
-        request.onerror=function(){
-            alert("error al recuperar los datos.")
-        }
-
-    }*/
-
-    /*function guardarProductos(){
-
-        let id=document.getElementById('codigo_prod')
-        let nombre = document.getElementById('nombre_prod')
-        let categoria = document.getElementById('id_cat')
-        let marca=document.getElementById('marca_prod')
-        let descripcion=document.getElementById('descripcion_prod')
-        let imagen=document.getElementById('imagen_prod')
-        let precio=document.getElementById('precio_prod')
-        let cantidad=document.getElementById('cantidad_prod')
-        let nitProv=document.getElementById('nit_prov')
-        let data={'codigo_prod':''} ////////////////////////////
-        let request=sendRequest('producto/', codigo_prod ? 'PUT': 'POST', data)
-        request.onload=function(){
-            window.location='productos.html';
-        }
-        request.onerror=function(){
-            alert('error al guardar los cambios')
-        }
-    }*/
-
+    let codigo = document.getElementById('codigo_prod')
+    let nombre = document.getElementById('nombre_prod')
+    let marca = document.getElementById('marca_prod')
+    let descripcion = document.getElementById('descripcion_prod')
+    let imagen = document.getElementById('imagen_prod')
+    let precio = document.getElementById('precio_prod')
+    let cantidad = document.getElementById('cantidad_prod')
+    let data={'codigo_prod':codigo, 'nombre_prod': nombre, 'marca_prod': marca_prod, 
+        'descripcion_prod':descripcion, 'url_imagen': imagen, 'precio_prod':precio, 'cantidad_prod':cantidad }
+    let request=sendRequest('producto/', codigo_prod ? 'PUT' : 'POST', data)
+    request.onload=function(){
+        window.location='productos.html';
+    }
+    request.onerror = function(){
+        alert('error al guardar cambios')
+    }
 
 }
